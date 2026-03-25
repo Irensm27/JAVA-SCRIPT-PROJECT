@@ -7,11 +7,21 @@ fetch('https://jsonplaceholder.typicode.com/users')
             const name = user.name;
             const divName = document.createElement('div');
             divName.classList.add('div-name');
-            divName.innerText = `${id} - ${name}`;
-            const buttonElement = document.createElement('button');
-            buttonElement.id = 'button';
-            buttonElement.innerHTML = `<a href="user-details.html?id=${user.id}">Детальніше</a>`;
-            divName.append(buttonElement);
+            divName.innerHTML =  `
+        <h3>${user.id}. ${user.name}</h3>
+        <a href="user-details.html?userId=${user.id}">Деталі</a>
+    `;
+
             document.body.appendChild(divName);
         }
     });
+
+
+// divName.innerText = `${id} - ${name}`;
+// const buttonElement = document.createElement('button');
+// buttonElement.id = 'button';
+// buttonElement.innerText = 'Детальніше';
+// buttonElement.onclick = function () {
+//     window.location.href= `user-details.html?id=${user.id}`;
+// };
+// divName.append(buttonElement);
