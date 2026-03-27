@@ -28,7 +28,35 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
                 <p>${user.company.catchPhrase}</p>
                 <p>${user.company.bs}</p>
             `;
-            container.appendChild(divInfo);
+        container.appendChild(divInfo);
 
     })
+            const postButton = document.createElement('button');
+            postButton.classList.add('postButton');
+            container.appendChild(postButton);
+            postButton.onclick = function (){
+                postButton.disabled = true;
+                fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
+                .then(res => res.json())
+                .then(function (posts) {
+                    console.log(posts);
+                    const postDiv = document.createElement('div');
+                    postDiv.classList.add('postDiv');
+                    for (const post of posts) {
+                        const postBlock = document.createElement('div');
+                        postBlock.classList.add('postBlock');
+                        postBlock.innerText = `${post.title} `;
+                        postDiv.appendChild(postBlock);
+                        const postButtonDetails = document.createElement('button');
+                        postButtonDetails.classList.add('postButtonDetails');
+                        postButtonDetails.innerHTML = `<a href="post-details.html?postId=${post.id}">Деталі</a>`;
+                        postBlock.appendChild(postButtonDetails);
+
+
+                    }
+                    container.append(postDiv);
+                })
+            }
+
+
 document.body.appendChild(container);
