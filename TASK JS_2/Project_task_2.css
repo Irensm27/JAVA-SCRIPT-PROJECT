@@ -1,10 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /*------------index-----------------*/
 .containerName{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    background-color: #cfdff3;
-
+    background-color: #dae3f1;
+    gap: 15px;
 }
 .div-name{
     height: 200px;
@@ -13,9 +18,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 209, 220, 0.66);
+    background-color: rgba(246, 220, 225, 0.66);
     border: 1px solid rgba(228, 78, 114, 0.66);
     font-size: larger ;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 .buttonDetails{
     background-color: #b2fbfb;
@@ -44,47 +51,54 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
+
 .divInfo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #cef1f1;
+    background: #9fc3c6;
+    border-radius: 12px;
+    text-align: center;
     width: 90%;
-    height: 470px;
+    margin: 20px;
 }
 .divInfo p{
     margin: 0;
     padding: 0;
 }
-.postButton{
-width: 90%;
+.postButton {
+    width: 90%;
     height: 40px;
-    background-color: #e6cef3;
-    transition: 0.8s;
-    border-radius: 5px;
+    border-radius: 10px;
+    background: #9b7bbd;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
 }
-.postButton:hover{
+.postButton:hover {
+    background: #7e5aa8;
     height: 50px;
 }
 .postDiv{
     margin-top: 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    background-color: #e1e7f4;
-    width: 60%;
-    height: 200px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
     border-radius: 10px;
 }
-.postBlock{
+.postBlock {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start;
-    margin-left: 10px;
-    gap: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.postBlock:hover {
+    transform: translateY(-5px);
 }
 .postButtonDetails a{
     text-decoration: none;
@@ -92,34 +106,34 @@ width: 90%;
 }
 
 /*----------------------post-details------------------*/
-.postDetailsContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: #cef1f1;
+.postDetailsContainer {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
 }
-.postDetDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #bccdf8;
-    height: 200px;
-    font-size: large;
-
+.postDetDiv {
+    background: #8fa2c9;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    color: white;
 }
-.postDetDiv p{
-    margin-left: 15px;
-    margin-top: 5px;
-    margin-bottom: 0;
-}
-.postDetDiv h3{
-    margin-left: 15px;
-}
-.commentContainer{
+.commentContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #f1dace;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
 }
-.commentContainer h3{
-    margin-bottom: 0;
+.commentDiv {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.commentDiv h4 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+.commentDiv small {
+    color: gray;
 }

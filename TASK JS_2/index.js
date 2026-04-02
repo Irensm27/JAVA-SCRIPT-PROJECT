@@ -16,16 +16,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
             divName.innerHTML =  `<h3>${user.id}. ${user.name}</h3>`;
             divName.appendChild(buttonDetails);
             containerName.appendChild(divName);
-            document.body.appendChild(containerName);
+
         }
     });
+document.body.appendChild(containerName);
 
-
-// divName.innerText = `${id} - ${name}`;
-// const buttonElement = document.createElement('button');
-// buttonElement.id = 'button';
-// buttonElement.innerText = 'Детальніше';
-// buttonElement.onclick = function () {
-//     window.location.href= `user-details.html?id=${user.id}`;
-// };
-// divName.append(buttonElement);

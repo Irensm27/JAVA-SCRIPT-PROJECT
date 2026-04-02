@@ -3,6 +3,9 @@ container.classList.add('usersContainer');
 
 const params = new URLSearchParams(window.location.search);
 const userId = params.get('userId');
+if (userId === null) {
+    alert('No user ID');
+}
 
 fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
     .then(res => res.json())
@@ -57,7 +60,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
                     }
                     container.append( postDiv);
                 })
-            }})
+            }});
 
 
-document.body.appendChild(container)
+document.body.appendChild(container);
