@@ -1,3 +1,5 @@
+const containerName = document.createElement('div');
+containerName.classList.add('containerName');
 
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(res => res.json())
@@ -7,12 +9,14 @@ fetch('https://jsonplaceholder.typicode.com/users')
             const name = user.name;
             const divName = document.createElement('div');
             divName.classList.add('div-name');
-            divName.innerHTML =  `
-        <h3>${user.id}. ${user.name}</h3>
-        <a href="user-details.html?userId=${user.id}">Деталі</a>
-    `;
+            const buttonDetails = document.createElement('button');
+            buttonDetails.classList.add('buttonDetails');
+            buttonDetails.innerHTML = `<a href="user-details.html?userId=${user.id}">More </a>`
 
-            document.body.appendChild(divName);
+            divName.innerHTML =  `<h3>${user.id}. ${user.name}</h3>`;
+            divName.appendChild(buttonDetails);
+            containerName.appendChild(divName);
+            document.body.appendChild(containerName);
         }
     });
 

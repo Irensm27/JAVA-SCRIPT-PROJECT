@@ -1,5 +1,5 @@
 const container = document.createElement('div');
-container.classList.add('users-container');
+container.classList.add('usersContainer');
 
 const params = new URLSearchParams(window.location.search);
 const userId = params.get('userId');
@@ -7,9 +7,9 @@ const userId = params.get('userId');
 fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
     .then(res => res.json())
     .then(function (user) {
-            const divInfo = document.createElement('div');
-            divInfo.classList.add('div-users-info');
-            divInfo.innerHTML = `
+        const divInfo = document.createElement('div');
+        divInfo.classList.add('divInfo');
+        divInfo.innerHTML = `
                 <h2>${user.id} ${user.name}</h2>
                 <p>Username: ${user.username}</p>
                 <p>Email: ${user.email}</p>
@@ -28,11 +28,12 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
                 <p>${user.company.catchPhrase}</p>
                 <p>${user.company.bs}</p>
             `;
-        container.appendChild(divInfo);
+            container.append(divInfo);
 
-    })
+
             const postButton = document.createElement('button');
             postButton.classList.add('postButton');
+            postButton.innerText = 'Post of current user';
             container.appendChild(postButton);
             postButton.onclick = function (){
                 postButton.disabled = true;
@@ -49,14 +50,14 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
                         postDiv.appendChild(postBlock);
                         const postButtonDetails = document.createElement('button');
                         postButtonDetails.classList.add('postButtonDetails');
-                        postButtonDetails.innerHTML = `<a href="post-details.html?postId=${post.id}">Деталі</a>`;
+                        postButtonDetails.innerHTML = `<a href="post-details.html?postId=${post.id}">More</a>`;
                         postBlock.appendChild(postButtonDetails);
 
 
                     }
-                    container.append(postDiv);
+                    container.append( postDiv);
                 })
-            }
+            }})
 
 
-document.body.appendChild(container);
+document.body.appendChild(container)

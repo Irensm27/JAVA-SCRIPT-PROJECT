@@ -1,4 +1,125 @@
+/*------------index-----------------*/
+.containerName{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    background-color: #cfdff3;
+
+}
 .div-name{
     height: 200px;
-    width: 200px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 209, 220, 0.66);
+    border: 1px solid rgba(228, 78, 114, 0.66);
+    font-size: larger ;
+}
+.buttonDetails{
+    background-color: #b2fbfb;
+    color: black;
+    height: 40px;
+    width: 130px;
+    text-decoration: none;
+    border: #000000 solid 2px;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+.buttonDetails:hover{
+    height: 50px;
+    width: 150px;
+    background-color: rgb(214, 176, 234);
+}
+.buttonDetails a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+/*-----------------------user-details-------------------*/
+.usersContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.divInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #cef1f1;
+    width: 90%;
+    height: 470px;
+}
+.divInfo p{
+    margin: 0;
+    padding: 0;
+}
+.postButton{
+width: 90%;
+    height: 40px;
+    background-color: #e6cef3;
+    transition: 0.8s;
+    border-radius: 5px;
+}
+.postButton:hover{
+    height: 50px;
+}
+.postDiv{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    background-color: #e1e7f4;
+    width: 60%;
+    height: 200px;
+    border-radius: 10px;
+}
+.postBlock{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+    gap: 10px;
+}
+.postButtonDetails a{
+    text-decoration: none;
+    color: black;
+}
+
+/*----------------------post-details------------------*/
+.postDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #cef1f1;
+}
+.postDetDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #bccdf8;
+    height: 200px;
+    font-size: large;
+
+}
+.postDetDiv p{
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.postDetDiv h3{
+    margin-left: 15px;
+}
+.commentContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f1dace;
+}
+.commentContainer h3{
+    margin-bottom: 0;
 }

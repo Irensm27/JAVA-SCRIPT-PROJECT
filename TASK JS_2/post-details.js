@@ -11,10 +11,10 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, )
         postDetDiv.classList.add('postDetDiv');
 
         postDetDiv.innerHTML = ` 
-        <p><b>User ID:</b> ${post.userId}</p>
-        <p><b>Post ID:</b> ${post.id}</p>
-        <h2>${post.title}</h2>
-        <p>${post.body}</p>
+        <p>User ID: ${post.userId}</p>
+        <p>Post ID: ${post.id}</p>
+        <h3> ${post.title}</h3>
+        <p> ${post.body}</p>
             `;
         postDetailsContainer.appendChild(postDetDiv);
 
@@ -24,7 +24,11 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, )
             .then(function (comments) {
                 const commentContainer = document.createElement('div');
                 commentContainer.classList.add('commentContainer');
+                const h3Comments = document.createElement('h3');
+                h3Comments.innerText = 'Comments';
+                commentContainer.append(h3Comments);
                 for (const comment of comments) {
+                    console.log(comment);
                 const commentsDiv = document.createElement('div');
                 commentsDiv.classList.add('commentDiv');
                 commentsDiv.innerHTML =`
@@ -32,10 +36,9 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, )
                             <p>${comment.body}</p>
                             <small>${comment.email}</small>
                         `;
-                const h2Comments = document.createElement('h2');
-                h2Comments.innerText = 'Comments';
 
-                    commentContainer.append(h2Comments, commentsDiv);
+
+                    commentContainer.append(commentsDiv);
 
 
             }      postDetailsContainer.appendChild(commentContainer);
