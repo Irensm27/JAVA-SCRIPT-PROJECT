@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(107, 133, 154);
+    display: flex;
+    justify-content: center;
+
+}
+#container{
+    width: 90%;
+    height: auto;
+    display: flex;
+
+    flex-direction: column;
+    background-color: white;
+    margin-top: 100px;
+
+}
+#container p{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+#container h2{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+/*---------------HEADER--------------------*/
+#header{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px
+}
+#header input{
+    width: 500px;
+    height: 30px;
+}
+#Add{
+    width: 50px;
+    height: 28px;
+    border-radius: 3px;
+}
+/*-----------------MAIN-----------------------*/
+#main{
+    display: flex;
+    flex-direction: row;
+    gap: 30px
+
+}
+#sortDiv{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-left: 30px;
+}
+#sortDiv p{
+    margin-left: 0;
+}
+#list{
+    border: 1px solid rgba(0, 0, 0, 0.47);
+    width: 485px;
+    height: 500px;
+    margin-bottom: 30px;
+}
+#buttonDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto auto 15px;
+    gap: 20px
+}
+#SortByName{
+    width: 120px;
+    height: 28px;
+    border-radius: 3px;
+}
+#SortByValue{
+    width: 120px;
+    height: 28px;
+    border-radius: 3px;
+}
+#Delete{
+    width: 90px;
+    height: 28px;
+    border-radius: 3px;
+}
