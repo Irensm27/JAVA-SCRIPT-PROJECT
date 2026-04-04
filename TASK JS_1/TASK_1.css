@@ -68,6 +68,7 @@ body{
     height: 500px;
     margin-bottom: 30px;
 }
+/*------------------BUTTON------------------------*/
 #buttonDiv{
     display: flex;
     flex-direction: column;
