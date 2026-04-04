@@ -7,6 +7,7 @@ const buttonDelete = document.getElementById('Delete');
 
 let pairs = [];
 
+// ---------------встановлення формату введених значень--------------------
 function isValid(input) {
     const regex = /^[a-zA-Z0-9]+\s*=\s*[a-zA-Z0-9]+$/;
     return regex.test(input);
@@ -15,6 +16,7 @@ function parseInput(input) {
     const [name, value] = input.split('=').map(item => item.trim());
     return { name, value };
 }
+// ----------------додаємо введені значення в список---------------------
 function render() {
     listDiv.innerHTML = '';
 
@@ -30,6 +32,7 @@ function render() {
         listDiv.appendChild(itemDiv);
     });
 }
+// -------------------------онклік на кнопки---------------------
 buttonAdd.onclick = () => {
     const value = input.value.trim();
     if (!isValid(value)) {
@@ -53,7 +56,7 @@ buttonDelete.onclick = () => {
     const boxes = document.querySelectorAll('input[type="checkbox"]:checked');
     const indexes = Array.from(boxes)
         .map(cb => Number(cb.dataset.index))
-        .sort((a,b) => b - a); // сортуємо по спадання
+        .sort((a,b) => b - a);
     indexes.forEach(i => pairs.splice(i, 1));
 
     render();

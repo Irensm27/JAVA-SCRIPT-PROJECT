@@ -1,0 +1,25 @@
+@media screen and  (max-width: 480px){
+    #header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #main {
+        flex-direction: column;
+    }
+    #header input{
+        width: 80%;
+
+    }
+    #list{
+        width: 75%;
+        height: 400px;
+    }
+    #buttonDiv{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-top: 0;
+        gap: 10px
+    }
+}

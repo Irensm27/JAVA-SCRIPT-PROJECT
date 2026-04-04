@@ -13,15 +13,13 @@ body{
     width: 90%;
     height: auto;
     display: flex;
-
     flex-direction: column;
     background-color: white;
     margin-top: 100px;
 
 }
 #container p{
-    margin-top: 30px;
-    margin-left: 30px;
+    margin: 30px auto 7px 30px;
 }
 #container h2{
     margin-top: 30px;
@@ -68,7 +66,7 @@ body{
 #buttonDiv{
     display: flex;
     flex-direction: column;
-    margin: 50px auto auto 15px;
+    margin: 55px auto auto 15px;
     gap: 20px
 }
 #SortByName{
